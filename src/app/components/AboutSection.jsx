@@ -3,7 +3,7 @@ import { useTransition, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { FileText, ExternalLink } from "lucide-react";
 
 const TAB_DATA = [
