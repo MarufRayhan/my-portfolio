@@ -235,7 +235,7 @@ const AboutSection = () => {
             <p className="text-base md:text-lg leading-relaxed mb-8 text-gray-300">
               I am a{" "}
               <span className="font-semibold text-white">
-                full stack web developer and AI Researcher
+                Full Stack Web developer and AI Researcher
               </span>{" "}
               with 4+ years of experience in web development, specializing in
               creating intuitive responsive interfaces and optimizing web
