@@ -7,7 +7,7 @@ import Image from "next/image";
 // Sample job experience data - replace with your actual experience
 const EXPERIENCE_DATA = [
   {
-    title: "Senior Frontend Developer",
+    title: "Full Stack Developer and Researcher",
     company: "Future Automation Systems and Technologies Lab- FAST.",
     location: "Tampere, Finland",
     period: "March 2024 - Present",
@@ -25,7 +25,7 @@ const EXPERIENCE_DATA = [
       "LLM",
       "Python",
       "Git",
-      "Tailwind CSS",
+      "CSS",
       "Generative AI",
     ],
   },
@@ -129,7 +129,12 @@ const ExperienceSection = () => {
 
               <div className="flex gap-6">
                 <div className="relative z-10">
-                  <div className="w-16 h-16 rounded-full bg-gray-800 border-2 border-white/20 flex items-center justify-center overflow-hidden"></div>
+                  <div className="w-16 h-16 rounded-full bg-gray-800 border-2 border-white/20 flex items-center justify-center overflow-hidden">
+                    <span className="text-white font-bold">
+                      {job.period.match(/\b\d{4}\b/)?.[0] ||
+                        job.period.split("-")[0]?.trim()}
+                    </span>
+                  </div>
                 </div>
 
                 <div className="flex-1">

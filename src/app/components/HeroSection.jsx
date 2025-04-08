@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import ScholarIcon from "../../../public/scholar-icon.svg";
 
 const HeroSection = () => {
   return (
@@ -50,7 +51,8 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <Link
-              href="/"
+              href="https://drive.google.com/file/d/1HpVG1tbTyJD4wpo4mzF-KzzAnm26ZRjE/view?usp=drive_link"
+              target="_blank"
               className="px-1 py-1 inline-block rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 border border-primary-700">
@@ -69,6 +71,12 @@ const HeroSection = () => {
                 alt="Linkedin Icon"
                 className="w-8 h-8"
               />
+            </Link>
+            <Link
+              href="https://scholar.google.com/citations?user=JekLRZ4AAAAJ&hl=en"
+              target="_blank"
+            >
+              <Image src={ScholarIcon} alt="Scholar Icon" className="w-8 h-8" />
             </Link>
           </div>
         </motion.div>

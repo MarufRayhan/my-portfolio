@@ -1,7 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Code2, Layout, Server, Cloud, Briefcase, Globe } from "lucide-react";
+import {
+  Code2,
+  Layout,
+  Server,
+  Cloud,
+  Briefcase,
+  Globe,
+  Brain,
+} from "lucide-react";
 
 // Skill data organized by category with experience levels
 const SKILLS_DATA = [
@@ -10,9 +18,12 @@ const SKILLS_DATA = [
     icon: <Code2 className="h-5 w-5" />,
     skills: [
       { name: "JavaScript", experience: "4+ years", level: 90 },
-      { name: "TypeScript", experience: "2+ years", level: 85 },
       { name: "Python", experience: "4+ years", level: 88 },
-      { name: "SQL", experience: "3+ years", level: 80 },
+      { name: "TypeScript", experience: "2+ years", level: 85 },
+      { name: "JAVA", experience: "Academic", level: 50 },
+      { name: "C#", experience: "1+ years", level: 50 },
+      { name: "C++", experience: "Academic", level: 50 },
+      { name: "C", experience: "Academic", level: 50 },
     ],
   },
   {
@@ -20,11 +31,12 @@ const SKILLS_DATA = [
     icon: <Layout className="h-5 w-5" />,
     skills: [
       { name: "React.js", experience: "3+ years", level: 92 },
-      { name: "Next.js", experience: "2+ years", level: 88 },
+      { name: "Next.js", experience: "2+ years", level: 90 },
+      { name: "HTML", experience: "3+ years", level: 95 },
+      { name: "CSS", experience: "4+ years", level: 80 },
       { name: "UI/UX Design", experience: "", level: 75 },
-      { name: "Figma", experience: "", level: 70 },
+      { name: "Figma", experience: "3+years", level: 70 },
       { name: "Responsive Design", experience: "", level: 85 },
-      { name: "React Native", experience: "", level: 78 },
     ],
   },
   {
@@ -32,28 +44,42 @@ const SKILLS_DATA = [
     icon: <Server className="h-5 w-5" />,
     skills: [
       { name: "Node.js", experience: "3+ years", level: 85 },
-      { name: "FastAPI", experience: "", level: 75 },
-      { name: "RESTful APIs", experience: "", level: 88 },
-      { name: "Python", experience: "", level: 82 },
+      { name: "FastAPI", experience: "1+ year", level: 75 },
+      { name: "RESTful APIs", experience: "3+ years", level: 88 },
+      { name: "Python", experience: "4+ years", level: 88 },
+      { name: "SQL", experience: "3+ years", level: 85 },
+    ],
+  },
+  {
+    category: "Artifical Intelligence",
+    icon: <Brain className="h-5 w-5" />,
+    skills: [
+      { name: "Large Language Models", experience: "", level: 99 },
+      { name: "RAG", experience: "", level: 95 },
+      { name: "AI Agent", experience: "", level: 85 },
+      { name: "Keras", experience: "", level: 85 },
+      { name: "Tensorflow", experience: "", level: 80 },
+      { name: "Matplotlib", experience: "", level: 82 },
     ],
   },
   {
     category: "Cloud & DevOps",
     icon: <Cloud className="h-5 w-5" />,
     skills: [
-      { name: "AWS (S3, Lambda)", experience: "", level: 78 },
+      { name: "AWS (S3, Lambda)", experience: "", level: 75 },
       { name: "Docker", experience: "", level: 75 },
-      { name: "Kubernetes", experience: "", level: 70 },
       { name: "CI/CD", experience: "", level: 72 },
     ],
   },
+
   {
     category: "Additional Skills",
     icon: <Briefcase className="h-5 w-5" />,
     skills: [
       { name: "Git", experience: "", level: 90 },
       { name: "Automated Testing", experience: "", level: 80 },
-      { name: "Cross-Platform Development", experience: "", level: 75 },
+      { name: "Confluence", experience: "", level: 90 },
+      { name: "Project Management", experience: "", level: 88 },
       { name: "Team Collaboration", experience: "", level: 95 },
     ],
   },

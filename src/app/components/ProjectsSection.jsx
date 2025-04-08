@@ -11,7 +11,7 @@ const projectsData = [
     description:
       "An implementation of the Autonomous LLM-based Agent System (ALAS) for improving user story quality in agile software development. This system uses LLM-based agents to automate the enhancement of user stories through a collaborative agent framework.",
     image: "/images/projects/project1.png",
-    tag: ["All", "Web"],
+    tag: ["All", "AI"],
     gitUrl: "https://github.com/MarufRayhan/AI--Agent",
     previewUrl: "/",
     techStack: ["Python", "OPENAI"],
@@ -32,39 +32,12 @@ const projectsData = [
     title: "Emotion Detection from bengali text data Using Deep Learning",
     description:
       "The project utilizes Bidirectional Gated Recurrent Unit (BiGRU) and CNN-BiLSTM (Convolutional Neural Network with Bidirectional Long Short-Term Memory) models to classify text into six emotional categories: happiness (আনন্দ), sadness (বিষণ্ণতা), fear (ভয়), anger (রাগ), love (ভালবাসা), and surprise (আশ্চর্য).",
-    image: "/images/projects/peoject3.png",
-    tag: ["All", "Web"],
+    image: "/images/projects/project3.png",
+    tag: ["All", "AI"],
     gitUrl: "https://github.com/MarufRayhan/bangla-sentiment-analysis/",
     previewUrl: "https://ieeexplore.ieee.org/abstract/document/9392690",
     techStack: ["Python", "keras", "Pandas", "NumPy"],
   },
-  // {
-  //   id: 4,
-  //   title: "Food Ordering Application",
-  //   description: "Project 4 description",
-  //   image: "/images/projects/4.png",
-  //   tag: ["All", "Mobile"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
-  // {
-  //   id: 5,
-  //   title: "React Firebase Template",
-  //   description: "Authentication and CRUD operations",
-  //   image: "/images/projects/5.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Full-stack Roadmap",
-  //   description: "Project 5 description",
-  //   image: "/images/projects/6.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
 ];
 
 const ProjectsSection = () => {

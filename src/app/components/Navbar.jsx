@@ -11,6 +11,14 @@ const navLinks = [
     path: "#about",
   },
   {
+    title: "Skills",
+    path: "#skills",
+  },
+  {
+    title: "Experience",
+    path: "#experience",
+  },
+  {
     title: "Projects",
     path: "#projects",
   },
@@ -28,7 +36,7 @@ const Navbar = () => {
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold font-orbitron tracking-wider uppercase drop-shadow-md hover:scale-105 transition-transform duration-300"
+          className="text-xl md:text-3xl text-white font-semibold font-orbitron tracking-wider uppercase drop-shadow-md hover:scale-105 transition-transform duration-300"
         >
           MRF
         </Link>

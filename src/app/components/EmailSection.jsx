@@ -1,10 +1,20 @@
 "use client";
 import { useState } from "react";
+import { Copy, Check } from "lucide-react";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [copied, setCopied] = useState(false);
+  const email = "maruf.rayhan14@gmail.com";
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,8 +75,30 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           I&apos;m currently looking for new opportunities. Whether you have a
-          question or just want to say hi, I&apos;ll get back to you!
+          question or just want to say hi, I&apos;ll get back to you! Below is
+          my personal email address or you can fill out the form to send me a
+          message &#128578;!
         </p>
+        <div className="flex items-center bg-gray-800/50 rounded-lg px-4 py-2 mb-6 border border-white/10 max-w-md">
+          <span className="text-white mr-2 font-medium">{email}</span>
+          <button
+            onClick={handleCopyEmail}
+            className="ml-auto bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-md transition-colors flex items-center"
+            aria-label="Copy email"
+          >
+            {copied ? (
+              <>
+                <Check className="h-4 w-4 mr-1" />
+                <span className="text-xs">Copied!</span>
+              </>
+            ) : (
+              <>
+                <Copy className="h-4 w-4 mr-1" />
+                <span className="text-xs">Copy</span>
+              </>
+            )}
+          </button>
+        </div>
         <div className="socials flex flex-row gap-2">
           {/* Add your social media icons here */}
         </div>
