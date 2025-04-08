@@ -138,38 +138,47 @@ const ExperienceSection = () => {
                 </div>
 
                 <div className="flex-1">
-                  <div className="bg-gray-800/50 rounded-lg p-6 border border-white/10 shadow-lg hover:shadow-white/5 transition-shadow">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                      <h3 className="text-xl font-bold text-white">
+                  <div className="bg-gray-800/50 rounded-lg p-3 sm:p-4 md:p-6 border border-white/10 shadow-lg hover:shadow-white/5 transition-shadow">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 md:mb-4">
+                      <h3 className="text-lg md:text-xl font-bold text-white">
                         {job.title}
                       </h3>
-                      <div className="flex items-center text-gray-400 text-sm mt-1 md:mt-0">
-                        <Calendar className="h-4 w-4 mr-1" />
+                      <div className="flex items-center text-gray-400 text-xs md:text-sm mt-1 md:mt-0">
+                        <Calendar className="h-3 w-3 md:h-4 md:w-4 mr-1" />
                         <span>{job.period}</span>
                       </div>
                     </div>
 
-                    <div className="flex items-center mb-4">
-                      <Building2 className="h-4 w-4 text-white mr-2" />
-                      <span className="text-gray-300">{job.company}</span>
+                    <div className="flex flex-wrap items-center mb-3 md:mb-4">
+                      <Building2 className="h-3 w-3 md:h-4 md:w-4 text-white mr-2" />
+                      <span className="text-gray-300 text-sm">
+                        {job.company}
+                      </span>
                       <span className="mx-2 text-gray-500">•</span>
-                      <span className="text-gray-400">{job.location}</span>
+                      <span className="text-gray-400 text-sm">
+                        {job.location}
+                      </span>
                     </div>
 
-                    <ul className="space-y-2 mb-4">
+                    <ul className="space-y-2 mb-3 md:mb-4">
                       {job.description.map((item, i) => (
-                        <li key={i} className="text-gray-300 flex">
-                          <span className="mr-2 text-white">•</span>
-                          <span>{item}</span>
+                        <li
+                          key={i}
+                          className="text-gray-300 text-xs md:text-sm flex"
+                        >
+                          <span className="mr-2 text-white flex-shrink-0">
+                            •
+                          </span>
+                          <span className="break-words">{item}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="flex flex-wrap gap-2 mt-4">
+                    <div className="flex flex-wrap gap-1 sm:gap-2 mt-3 md:mt-4">
                       {job.technologies.map((tech, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 bg-gray-700/50 text-white text-xs rounded-full border border-white/10"
+                          className="px-2 sm:px-3 py-1 bg-gray-700/50 text-white text-xs rounded-full border border-white/10"
                         >
                           {tech}
                         </span>
