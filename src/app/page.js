@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import AchievementsSection from "./components/AchievementsSection";
 import ExperienceSection from "./components/experience-section";
 import SkillsSection from "./components/skills-section";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <ProjectsSection />
         <EmailSection />
       </div>
+      <Analytics />
       <Footer />
     </main>
   );
