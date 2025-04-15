@@ -166,13 +166,14 @@ export async function findRelevantInfo(query, chunksWithEmbeddings) {
 export async function loadProcessedChunks() {
   try {
     const data = await fs.readFile(
-      `${process.cwd()}/data/processed-personal-info.json`,
-      "utf-8"
+      process.cwd() + "/public/data/test.json",
+      "utf8"
     );
     return JSON.parse(data);
   } catch (error) {
     // If file doesn't exist, process the document
     console.log("Processing document for first use...");
-    return processDocument(`${process.cwd()}/data/personal-info.txt`);
+    console.log("file path", process.cwd() + "/public/data/test.txt", "utf8");
+    return processDocument(process.cwd() + "/public/data/test.txt", "utf8");
   }
 }

@@ -1,0 +1,87 @@
+Maruf Rayhan
+Tampere, Finland | (358) 041-3111797 | Email: maruf.rayhan14@gmail.com
+LinkedIn Profile: linkedin.com/in/md-maruf-rayhan | GitHub: github.com/MarufRayhan
+Website: www.marufrayhan.com
+
+PROFESSIONAL SUMMARY
+Software Developer with 4+ years of experience in modern web development. Strong expertise in
+React, Python, Next.js, TypeScript, Node.js, and Cloud Services (AWS/Azure). Demonstrated ability
+to develop user-friendly applications and optimize performance across platforms.
+
+SKILLS
+●​ Programming Languages: JavaScript (4+ years), TypeScript (2+ years), Python (4+ years)
+●​ Frontend Development: React.js (3+ years), Redux (3+ years), Next.js (2+ years),
+CSS/SCSS (3+ years), UI/UX Design, Web Technologies, Figma
+●​ Backend Development: Node.js (3+ years), Express.js (2´+ years), FastAPI, RESTful APIs,
+SQLDatabases
+●​ Software Testing: Manual testing, Unit testing, Automated Testing,
+●​ Artificial Intelligence: LLM, Rag, Tensorflow, ´Keras, Matplotlib, Pandas
+●​ Cloud & DevOps: AWS (S3, Lambda), Docker, CI/CD
+●​ Additional Skills: Git, Atlassian Jira, Cross-Platform Development, Team Collaboration
+●​ Languages: English (Fluent, IELTS: 7)
+
+WORK EXPERIENCE
+Future Automation Systems and Technologies Lab- FAST, Tampere, Finland
+Full Stack Software Developer and Researcher— 03/2024 - Present
+●​ Leading the development of an EU-funded collaborative education streaming data platform,
+overseeing partnerships with 25 global collaborators across 12 countries to establish a
+centralized learning hub.
+●​ Architected and implemented a real-time learning management system
+(https://www.ai-prism.dev/) with scalable data pipelines using Next.js, TypeScript, and AWS
+(S3, Lambda). Designed streaming data workflows processing of educational content,
+implemented Docker-based microservices for consistent deployment, and built REST APIs to
+ensure data quality across development and production environments.
+●​ Successfully leading a team of 3 developers to integrate Large Language Models for
+automated document generation and organization, streamlining the process of creating and
+managing documentation by 60%.
+GPT Lab, Tampere, Finland
+Research Assistant — 06/2023 - 09/2023
+●​ Developed an innovative system for AI agent collaboration, establishing one of the first
+implementations where AI agents work together on software engineering tasks.
+●​ Authored and collaborated on research with Austrian Post Group IT, introducing an
+Autonomous LLM-based Agent System (ALAS) that improved the quality of thousands of user
+stories across 6 agile teams, driving real-world adoption and operational efficiency.
+
+●​ Independently designed and developed the lab's website (gpt-lab.eu) from scratch, while
+implementing comprehensive branding strategy across LinkedIn and X (Twitter) to establish
+GPT Lab's digital presence.
+Tampere University, Tampere, Finland
+Teaching Assistant — 06/2023 - 12/2024
+●​ Mentored and guided 120+ computer science students every year in Software Design and
+Requirement Engineering course, assessing projects, and delivering detailed feedback on
+architecture patterns, SOLID principles, design systems and requirements analysis.
+BJIT Limited, Dhaka, Bangladesh
+Software Engineer — 01/2019 - 07/2022
+●​ Developed and optimized multiple React.js applications including a restaurant management
+system, NFT marketplace, and CV sorting system
+●​ Managed internal project with efficient, maintainable, and scalable code
+●​ Implemented Node.js backend services with TypeScript for performance and type safety
+●​ Utilized Docker and CI/CD pipelines for streamlined deployment and testing
+●​ Led cross-functional collaboration and demonstrated strong communication skill as product
+owner for a Japanese NFT marketplace, coordinating with international stakeholders
+
+Education
+Tampere University, Tampere, Finland
+MSc in Software, Web and Cloud — 08/2022 - 12/2024
+Thesis: Developing an AI-driven network suite: Leveraging LLMs for automated document
+processing and generation
+American International University Bangladesh(AIUB), Dhaka, Bangladesh
+BSc in Computer Science and Engineering — 05/2014 - 02/2018
+Coursework: Data Structure (DS), Algorithm
+
+CERTIFICATIONS
+●​ Professional Scrum Master™ I (PSM I) (Issued by Scrum.org, December 16, 2021)
+
+AWARDS
+●​ Magna Cum Laude BSc Academic award based on criteria - Between CGPA 3.85 - 3.94 /4.00
+●​ DEAN’S LIST HONORS Two times AIUB Dean’s List and Dean’s Honorable Mention Award for
+successfully earning a grade point average (GPA) 3.90/4.00.
+
+HOBBIES
+I like to play Fifa, plyaing soccer and learn more about Technologies
+
+PERSONAL LIFE
+I born and brought up in Rangpur, Bangladesh. My school was Rangpur Zilla school where I studeied my secondary certification.
+My college was Rangpur Canotonment Public School and College, I had My Higher Secondary certification. In both my School
+and College I graduated with highest degree securing A+ in all the subjects. I am by born Muslim. My favorite player is 
+Lionel Messi. My dream is to be a CTO of any renowned company. 
