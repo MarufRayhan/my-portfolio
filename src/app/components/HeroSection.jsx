@@ -27,7 +27,7 @@ const HeroSection = () => {
                 1000,
                 "AI Researcher",
                 1000,
-                "Scrum Master",
+                "Professional Scrum Master",
                 1000,
                 "Thinker",
                 1000,

@@ -1,0 +1,18 @@
+
+ABOUT ME
+My name is Maruf Rahman. I'm a software engineer specializing in web development with over 5 years of experience. I currently work at TechCorp as a Senior Frontend Developer.
+
+EDUCATION
+I graduated from University of Technology with a Bachelor's degree in Computer Science in 2018. I also completed a certification in Advanced JavaScript Programming from CodeAcademy in 2020.
+
+SKILLS
+My primary skills include React, Next.js, TypeScript, and Node.js. I'm also proficient in UI/UX design principles and have experience with Python and Django for backend development.
+
+PROJECTS
+I've developed several key projects including an e-commerce platform for local businesses, a real-time chat application, and a portfolio website generator. My most recent project was a dashboard for monitoring and analyzing user engagement metrics.
+
+CONTACT
+The best way to reach me is through email at maruf@example.com or by phone at (555) 123-4567. I'm also available on LinkedIn at linkedin.com/in/marufrahman.
+
+HOBBIES
+In my free time, I enjoy hiking, playing chess, and contributing to open-source projects. I'm also an avid reader of science fiction novels and technical books.
