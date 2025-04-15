@@ -1,6 +1,7 @@
 // utils/documentProcessor.js
 import fs from "fs/promises";
 import { cohere } from "@ai-sdk/cohere";
+import path from "path";
 
 // Function to process your document initially
 export async function processDocument(filePath) {
@@ -164,16 +165,28 @@ export async function findRelevantInfo(query, chunksWithEmbeddings) {
 
 // Helper function to load processed chunks from saved file
 export async function loadProcessedChunks() {
+  // Define the path to the pre-processed file
+  const filePath = path.join(
+    process.cwd(),
+    "data",
+    "processed-personal-info.json"
+  );
+
   try {
-    const data = await fs.readFile(
-      process.cwd() + "/public/data/test.json",
-      "utf8"
-    );
+    console.log("Reading processed data from:", filePath);
+    const data = await fs.readFile(filePath, "utf8");
     return JSON.parse(data);
   } catch (error) {
-    // If file doesn't exist, process the document
-    console.log("Processing document for first use...");
-    console.log("file path", process.cwd() + "/public/data/test.txt", "utf8");
-    return processDocument(process.cwd() + "/public/data/test.txt", "utf8");
+    console.error("Error reading processed data:", error);
+
+    // Return fallback minimal data as a last resort
+    return {
+      chunks: [
+        {
+          text: "I'm Maruf, a software developer. You can contact me through the contact form on this website.",
+          metadata: { source: "fallback" },
+        },
+      ],
+    };
   }
 }

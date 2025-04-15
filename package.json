@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update-data": "node scripts/update-data.js"
   },
   "dependencies": {
     "@ai-sdk/cohere": "^1.2.8",
