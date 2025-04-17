@@ -75,6 +75,10 @@ const Navbar = () => {
       path: "#contact",
     },
     {
+      title: "Blog",
+      path: "/blog",
+    },
+    {
       title: "Chat With Assistant",
       isChat: true,
       onClick: handleOpenChat,

@@ -1,9 +1,29 @@
-// scripts/update-data.js
+// scripts/process-standalone.js
 const fs = require("fs").promises;
 const path = require("path");
 
-// Import your processDocument function
-const { processDocument } = require("../app/api/chat/utils/documentProcessor");
+// Define a simple document processing function
+// You can copy the core logic from your existing processDocument function
+async function processDocument(filePath) {
+  try {
+    console.log(`Reading file from: ${filePath}`);
+    const content = await fs.readFile(filePath, "utf8");
+
+    // Split into chunks (adjust this logic to match your existing processor)
+    const chunks = content
+      .split("\n\n")
+      .map((text) => ({
+        text: text.trim(),
+        metadata: { source: path.basename(filePath) },
+      }))
+      .filter((chunk) => chunk.text.length > 0);
+
+    return { chunks };
+  } catch (error) {
+    console.error(`Error processing document: ${error.message}`);
+    throw error;
+  }
+}
 
 async function updateProcessedFile() {
   try {
@@ -28,9 +48,10 @@ async function updateProcessedFile() {
       "utf8"
     );
 
-    console.log("✅ Successfully updated processed data file!");
+    console.log(" Successfully updated processed data file!");
   } catch (error) {
-    console.error("❌ Error updating processed data:", error);
+    console.error(" Error updating processed data:", error);
+    console.error("Stack:", error.stack);
     process.exit(1);
   }
 }

@@ -178,13 +178,13 @@ export default function Chat() {
                   <Button
                     type="submit"
                     size="icon"
-                    className="h-10 w-10 mr-2 rounded-md bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-colors duration-300"
+                    className="h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-colors duration-300"
                     disabled={isLoading || !input.trim()}
                   >
                     {isLoading ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
                     ) : (
-                      <Send className="h-4 w-4" />
+                      <Send className="h-5 w-5" />
                     )}
                   </Button>
                 </TooltipTrigger>
