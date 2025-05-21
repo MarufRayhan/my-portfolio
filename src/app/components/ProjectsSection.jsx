@@ -38,6 +38,17 @@ const projectsData = [
     previewUrl: "https://ieeexplore.ieee.org/abstract/document/9392690",
     techStack: ["Python", "keras", "Pandas", "NumPy"],
   },
+  {
+    id: 4,
+    title: "AI-PRISM (Professional project)",
+    description:
+      "I have developed this web project (AI integrated) working as a developer at FAST-Lab. This is an ongoing project soon it will be in production level. For more information about the features and functionalities, please contact with me.",
+    image: "/images/projects/project4.png",
+    tag: ["All", "AI"],
+    gitUrl: "https://www.ai-prism.dev/",
+    previewUrl: "https://www.ai-prism.dev/",
+    techStack: ["Next.js", "AWS", "NeonDB", "LLM", "Auth", "Vercel"],
+  },
 ];
 
 const ProjectsSection = () => {
