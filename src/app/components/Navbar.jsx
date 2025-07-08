@@ -63,6 +63,10 @@ const Navbar = () => {
       path: "#skills",
     },
     {
+      title: "Coding Stats",
+      path: "#coding-stats",
+    },
+    {
       title: "Experience",
       path: "#experience",
     },

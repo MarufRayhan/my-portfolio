@@ -51,7 +51,7 @@ const SKILLS_DATA = [
     ],
   },
   {
-    category: "Artifical Intelligence",
+    category: "Artificial Intelligence",
     icon: <Brain className="h-5 w-5" />,
     skills: [
       { name: "Large Language Models", experience: "", level: 99 },
@@ -71,7 +71,6 @@ const SKILLS_DATA = [
       { name: "CI/CD", experience: "", level: 72 },
     ],
   },
-
   {
     category: "Additional Skills",
     icon: <Briefcase className="h-5 w-5" />,
@@ -234,23 +233,92 @@ const SkillsSection = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className={`relative mt-6 col-span-2 row-span-1 transform transition-all duration-500 delay-400 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-        style={{ marginTop: "-0.5rem" }}
-      >
-        <div className="h-full rounded-xl bg-gray-800/80 border border-white/10 p-6 mt-6 flex flex-col justify-center hover:border-white/20 transition-all duration-300">
-          <blockquote className="relative">
-            <p className="text-white text-sm md:text-base italic pl-6 pr-6">
-              "Everything is obsolete in this world, so try to learn every day."
-            </p>
-            <footer className="text-right mt-2 text-gray-400 text-sm">
-              — Maruf Rayhan
-            </footer>
-          </blockquote>
-        </div>
+
+        {/* Coding Stats Section */}
+        <motion.div
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+          variants={fadeIn}
+          className="mt-16"
+          id="coding-stats" // Added ID for navigation
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white inline-block">
+              Coding Stats
+            </h2>
+            <div className="h-1 w-20 bg-white mx-auto rounded-full" />
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5 }}
+              className="rounded-xl bg-gray-800/50 backdrop-blur-sm border border-white/10 p-6 flex flex-col shadow-lg hover:shadow-white/5 hover:border-white/20 transition-all duration-300"
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <span className="p-2 bg-white/10 rounded-lg text-white">
+                  <Code2 className="h-6 w-6" />
+                </span>
+                <h3 className="text-white text-lg md:text-xl font-medium">
+                  My Coding Activity
+                </h3>
+              </div>
+
+              <div className="flex flex-col gap-6">
+                {/* GitHub Stats */}
+                <div className="flex flex-col items-center">
+                  <p className="text-white text-sm md:text-base font-medium mb-2">
+                    GitHub Stats
+                  </p>
+                  <a
+                    href="http://www.github.com/marufrayhan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://github-readme-streak-stats.herokuapp.com/?user=marufrayhan&stroke=ffffff&background=000000&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true"
+                      alt="GitHub Streak Stats"
+                      className="w-full max-w-[500px] rounded-lg"
+                    />
+                  </a>
+                </div>
+
+                {/* LeetCode Stats */}
+                <div className="flex flex-col items-center">
+                  <p className="text-white text-sm md:text-base font-medium mb-2">
+                    LeetCode Stats
+                  </p>
+                  <img
+                    src="https://leetcard.jacoblin.cool/marufrayhan?theme=dark&font=Quintessential&ext=activity"
+                    alt="LeetCode Stats"
+                    className="w-full max-w-[500px] rounded-lg"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Quote Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-12 max-w-5xl mx-auto"
+        >
+          <div className="rounded-xl bg-gray-800/50 backdrop-blur-sm border border-white/10 p-6 flex flex-col justify-center hover:border-white/20 transition-all duration-300">
+            <blockquote className="relative">
+              <p className="text-white text-sm md:text-base italic pl-6 pr-6">
+                "Everything is obsolete in this world, so try to learn every
+                day."
+              </p>
+              <footer className="text-right mt-2 text-gray-400 text-sm">
+                — Maruf Rayhan
+              </footer>
+            </blockquote>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

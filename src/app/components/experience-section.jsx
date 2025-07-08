@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Building2, Calendar } from "lucide-react";
+import { Building2, Calendar, Code2 } from "lucide-react";
 import Image from "next/image";
 
 // Sample job experience data - replace with your actual experience
@@ -112,83 +112,6 @@ const ExperienceSection = () => {
             Professional Experience
           </h2>
           <div className="h-1 w-20 bg-white mx-auto rounded-full" />
-        </motion.div>
-
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
-          className="space-y-12 max-w-4xl mx-auto"
-        >
-          {EXPERIENCE_DATA.map((job, index) => (
-            <motion.div key={index} variants={itemVariant} className="relative">
-              {/* Timeline connector */}
-              {index < EXPERIENCE_DATA.length - 1 && (
-                <div className="absolute left-8 top-16 bottom-0 w-0.5 bg-white/20" />
-              )}
-
-              <div className="flex gap-6">
-                <div className="relative z-10">
-                  <div className="w-16 h-16 rounded-full bg-gray-800 border-2 border-white/20 flex items-center justify-center overflow-hidden">
-                    <span className="text-white font-bold">
-                      {job.period.match(/\b\d{4}\b/)?.[0] ||
-                        job.period.split("-")[0]?.trim()}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex-1">
-                  <div className="bg-gray-800/50 rounded-lg p-3 sm:p-4 md:p-6 border border-white/10 shadow-lg hover:shadow-white/5 transition-shadow">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 md:mb-4">
-                      <h3 className="text-lg md:text-xl font-bold text-white">
-                        {job.title}
-                      </h3>
-                      <div className="flex items-center text-gray-400 text-xs md:text-sm mt-1 md:mt-0">
-                        <Calendar className="h-3 w-3 md:h-4 md:w-4 mr-1" />
-                        <span>{job.period}</span>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-wrap items-center mb-3 md:mb-4">
-                      <Building2 className="h-3 w-3 md:h-4 md:w-4 text-white mr-2" />
-                      <span className="text-gray-300 text-sm">
-                        {job.company}
-                      </span>
-                      <span className="mx-2 text-gray-500">•</span>
-                      <span className="text-gray-400 text-sm">
-                        {job.location}
-                      </span>
-                    </div>
-
-                    <ul className="space-y-2 mb-3 md:mb-4">
-                      {job.description.map((item, i) => (
-                        <li
-                          key={i}
-                          className="text-gray-300 text-xs md:text-sm flex"
-                        >
-                          <span className="mr-2 text-white flex-shrink-0">
-                            •
-                          </span>
-                          <span className="break-words">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mt-3 md:mt-4">
-                      {job.technologies.map((tech, i) => (
-                        <span
-                          key={i}
-                          className="px-2 sm:px-3 py-1 bg-gray-700/50 text-white text-xs rounded-full border border-white/10"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
     </section>
