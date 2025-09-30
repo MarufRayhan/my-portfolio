@@ -31,6 +31,7 @@ export async function processDocument(filePath) {
 
     // Generate and store embeddings
     const chunksWithEmbeddings = await addEmbeddings(chunksWithMetadata);
+    console.log("chunk with embesiing", chunksWithEmbeddings);
 
     // Save processed data for faster loading in production
     await fs.writeFile(
@@ -66,6 +67,8 @@ async function addEmbeddings(chunks) {
     });
 
     const data = await response.json();
+
+    console.log("embedd created");
 
     if (!data.embeddings) {
       throw new Error("Failed to get embeddings: " + JSON.stringify(data));
@@ -125,11 +128,17 @@ export async function findRelevantInfo(query, chunksWithEmbeddings) {
     // Get embedding for the query
     const queryEmbedding = await getQueryEmbedding(query);
 
+    const chunks = Array.isArray(chunksWithEmbeddings)
+      ? chunksWithEmbeddings
+      : chunksWithEmbeddings.chunks;
+
     // Calculate similarity for each chunk
-    const chunksWithSimilarity = chunksWithEmbeddings.map((chunk) => ({
+    const chunksWithSimilarity = chunks.map((chunk) => ({
       ...chunk,
       similarity: cosineSimilarity(queryEmbedding, chunk.embedding),
     }));
+
+    console.log("code not coming here");
 
     // Sort by similarity score (highest first)
     const sortedChunks = chunksWithSimilarity.sort(
@@ -141,9 +150,13 @@ export async function findRelevantInfo(query, chunksWithEmbeddings) {
     const similarityThreshold = 0.65; // Minimum similarity score to consider
     const maxChunks = 3; // Maximum number of chunks to return
 
+    console.log("it is fine here 1");
+
     const relevantChunks = sortedChunks
       .filter((chunk) => chunk.similarity > similarityThreshold)
       .slice(0, maxChunks);
+
+    console.log("it is fine here 2");
 
     // If no chunks meet the threshold, return the single best match
     if (relevantChunks.length === 0 && sortedChunks.length > 0) {
@@ -174,19 +187,24 @@ export async function loadProcessedChunks() {
 
   try {
     console.log("Reading processed data from:", filePath);
-    const data = await fs.readFile(filePath, "utf8");
-    return JSON.parse(data);
+    const file = await fs.readFile(filePath, "utf8");
+    const data = JSON.parse(file);
+
+    // Return the chunks array, not the first chunk or the whole object
+    const chunksWithEmbeddings = data.chunks || [];
+
+    console.log("type of chunkembeding", typeof chunksWithEmbeddings);
+    console.log("Is array?", Array.isArray(chunksWithEmbeddings));
+    console.log("Number of chunks:", chunksWithEmbeddings.length);
+
+    return chunksWithEmbeddings;
   } catch (error) {
     console.error("Error reading processed data:", error);
-
-    // Return fallback minimal data as a last resort
-    return {
-      chunks: [
-        {
-          text: "I'm Maruf, a software developer. You can contact me through the contact form on this website.",
-          metadata: { source: "fallback" },
-        },
-      ],
-    };
+    return [
+      {
+        text: "I'm Maruf, a software developer. You can contact me through the contact form on this website.",
+        metadata: { source: "fallback" },
+      },
+    ];
   }
 }

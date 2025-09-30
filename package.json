@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "update-data": "node scripts/update-data.js"
+    "update-data": "node scripts/update-data.js",
+    "regenerate": "node scripts/regenerate-embeddings.js"
   },
   "dependencies": {
     "@ai-sdk/cohere": "^1.2.8",
@@ -20,6 +21,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cohere-ai": "^7.16.0",
+    "dotenv": "^17.2.3",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.15",
     "framer-motion": "^10.18.0",

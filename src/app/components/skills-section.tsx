@@ -66,9 +66,10 @@ const SKILLS_DATA = [
     category: "Cloud & DevOps",
     icon: <Cloud className="h-5 w-5" />,
     skills: [
-      { name: "AWS (S3, Lambda)", experience: "", level: 75 },
-      { name: "Docker", experience: "", level: 75 },
-      { name: "CI/CD", experience: "", level: 72 },
+      { name: "Azure", experience: "Industry", level: 75 },
+      { name: "AWS (S3, Lambda)", experience: "Industry", level: 70 },
+      { name: "Docker", experience: "Industry", level: 70 },
+      { name: "CI/CD", experience: "Industry", level: 70 },
     ],
   },
   {

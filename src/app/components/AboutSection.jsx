@@ -22,7 +22,7 @@ const TAB_DATA = [
           {
             institution: "American International University Bangladesh(AIUB)",
             degree: "BSc in Computer Science and Engineering (CSE)",
-            year: "2014 - 2028",
+            year: "2014 - 2018",
             description:
               "Computer Science major with a focus on Software Development",
           },
@@ -44,6 +44,12 @@ const TAB_DATA = [
     content: (
       <div className="space-y-3">
         {[
+          {
+            name: "Microsoft Certified: Azure Fundamental",
+            issuer: "Microsoft",
+            year: "Septermber, 2025",
+            url: "https://learn.microsoft.com/en-us/users/mdmarufrayhan-1173/credentials/193e46fcca1687f?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+          },
           {
             name: "Professional Scrum Master™ I (PSM I)",
             issuer: "Issued by Scrum.org",
@@ -106,6 +112,11 @@ const TAB_DATA = [
             issuer:
               "49th Euromicro Conference on Software Engineering and Advanced Applications",
             url: "https://scholar.google.com/citations?user=JekLRZ4AAAAJ&hl=en",
+          },
+          {
+            name: "Students' Perception of LLM Use in Requirements Engineering Education: An Empirical Study Across Two Universities",
+            issuer: "IEEE",
+            url: "https://arxiv.org/abs/2509.05995",
           },
         ].map((pub, index) => (
           <a

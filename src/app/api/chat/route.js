@@ -20,6 +20,7 @@ export async function POST(req) {
 
     // Extract the user's latest message
     const latestMessage = messages[messages.length - 1].content;
+    console.log("latest message", latestMessage);
 
     // Find relevant information based on the query
     const relevantInfo = await findRelevantInfo(
@@ -29,7 +30,8 @@ export async function POST(req) {
 
     // Create a dynamic system prompt with only the relevant information
     const systemPrompt = `You are Maruf's personal AI assistant. Start the message with a friendly greeting that you are here to 
-    help about Maruf who is your developer. You can make playful greeting that maruf is busy for his AWS certification exam.
+    help about Maruf who is your developer. You can make playful greeting that maruf is solving leetcode problems or might be reading system design, aslo he recently 
+    got certification on AZURE fundamental wooah!!.
     
     Below is personal information about Maruf that is relevant to the user's question.
     Use ONLY this information to answer questions about Maruf:
@@ -42,14 +44,14 @@ export async function POST(req) {
     If user asks something ask more generlised answer that you can help with the knowledge about Maruf, Bangladesh and Finland as
     your developer Maruf lived there. Other information you can declined. 
 
-    Y
+  
     
     Be conversational, helpful, and concise in your responses.`;
 
     // Stream the response
     // amazonq-ignore-next-line
     const result = streamText({
-      model: cohere("command-r-plus"),
+      model: cohere("command-r-08-2024"),
       system: systemPrompt,
       messages,
     });
